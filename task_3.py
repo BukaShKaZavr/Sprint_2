@@ -1,7 +1,7 @@
 class PointsForPlace:
-    points = 0
 
-    def get_points_for_place(self, place: int):
+    @staticmethod
+    def get_points_for_place(place: int):
         if place > 100:
             return 'Баллы начисляются только первым 100 участникам'
         elif place < 1:
