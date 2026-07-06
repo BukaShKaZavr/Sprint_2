@@ -13,12 +13,14 @@ class PointsForPlace:
 
 class PointsForMeters:
 
-    def get_points_for_meters(self, meters: int):
+    @staticmethod
+    def get_points_for_meters(meters: int):
+        points = 0
         if meters < 0:
             return 'Количество метров не может быть отрицательным'
         else:
             points = meters * 0.5
-            return points
+            return int(points)
 
 
 
