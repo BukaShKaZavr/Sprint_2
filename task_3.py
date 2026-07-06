@@ -29,7 +29,7 @@ class TotalPoints(PointsForPlace, PointsForMeters):
         self.total = 0
 
     def get_total_points(self, meters: int, place: int):
-        self.total = PointsForPlace().get_points_for_place(place) + PointsForMeters().get_points_for_meters(meters)
+        self.total = super().get_points_for_place(place) + super().get_points_for_meters(meters)
         return self.total
 
 
@@ -43,4 +43,4 @@ print(points_for_meters.get_points_for_meters(10))
 total_points = TotalPoints()
 print(total_points.get_points_for_place(10))
 print(total_points.get_points_for_meters(10))
-print(total_points.get_total_points(100, 10))
+print(total_points.get_total_points(100, 102))
